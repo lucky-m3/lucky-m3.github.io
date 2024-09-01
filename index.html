@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>站长推荐</title>
+    <style>
+        /* 整体容器 */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* 将标题移到正上方 */
+        .page-title {
+            font-size: 32px;
+            color: red;
+            margin-bottom: 20px;
+        }
+
+        /* 自定义按钮样式 */
+        .custom-button {
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .custom-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* 设置背景图片 */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://www.dmoe.cc/random.php');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 标题移到正中央 -->
+        <h2 class="page-title">我们需要确认你的年龄</h2>
+
+        <!-- 放置在底部的按钮 -->
+        <div>
+            <button class="custom-button" onclick="location.href='https://www.bilibili.com/video/BV1GJ411x7h7/'">已满18岁</button>
+            <button class="custom-button" onclick="alert('未成年勿入！')">未满18岁</button>
+        </div>
+    </div>
+</body>
+</html>
