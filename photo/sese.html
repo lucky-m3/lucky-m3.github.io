@@ -27,9 +27,77 @@
   <br>
   <img border="0" src="https://www.loliapi.com/bg/">
   <br>
-  <img border="0" src="https://api.mossia.top/randPic/pixiv">
+    <script>
+      // 后端接口地址
+      const apiUrl = 'https://api.mossia.top/randPic/pixiv?r18'; // 替换为你的接口地址
+
+      // 获取窗口宽度和高度并设置容器宽度和高度
+      function setContainerSize() {
+        const imageContainer = document.getElementById('image-container');
+        imageContainer.style.width = `${window.innerWidth}px`;
+        imageContainer.style.height = `${window.innerHeight}px`;
+      }
+
+      // 页面加载时设置容器宽度和高度
+      window.addEventListener('load', setContainerSize);
+
+      // 窗口大小变化时重新设置容器宽度和高度
+      window.addEventListener('resize', setContainerSize);
+
+      // Fetch 图片数据并渲染
+      async function fetchImage() {
+        try {
+          const response = await fetch(apiUrl);
+          const data = await response.json();
+          if (data.success) {
+            const imageContainer = document.getElementById('image-container');
+            imageContainer.innerHTML = `<img src="${data.data}" alt="Random Image" />`;
+          } else {
+            console.error('Failed to fetch image:', data.message);
+          }
+        } catch (error) {
+          console.error('Error fetching image:', error);
+        }
+      }
+
+      fetchImage();
+    </script>
   <br>
-  <img border="0" src="https://api.mossia.top/randPic/pixiv?r18=1">
+    <script>
+      // 后端接口地址
+      const apiUrl = 'https://api.mossia.top/randPic/pixiv?r18=1'; // 替换为你的接口地址
+
+      // 获取窗口宽度和高度并设置容器宽度和高度
+      function setContainerSize() {
+        const imageContainer = document.getElementById('image-container');
+        imageContainer.style.width = `${window.innerWidth}px`;
+        imageContainer.style.height = `${window.innerHeight}px`;
+      }
+
+      // 页面加载时设置容器宽度和高度
+      window.addEventListener('load', setContainerSize);
+
+      // 窗口大小变化时重新设置容器宽度和高度
+      window.addEventListener('resize', setContainerSize);
+
+      // Fetch 图片数据并渲染
+      async function fetchImage() {
+        try {
+          const response = await fetch(apiUrl);
+          const data = await response.json();
+          if (data.success) {
+            const imageContainer = document.getElementById('image-container');
+            imageContainer.innerHTML = `<img src="${data.data}" alt="Random Image" />`;
+          } else {
+            console.error('Failed to fetch image:', data.message);
+          }
+        } catch (error) {
+          console.error('Error fetching image:', error);
+        }
+      }
+
+      fetchImage();
+    </script>
   <br>
     <script>
       // 后端接口地址
