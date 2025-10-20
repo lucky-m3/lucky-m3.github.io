@@ -16,25 +16,14 @@
 </nav>
 <nav class="nav--shadow"></nav>
 <div class="slideout-panel slideout-panel-right" id="panel">
-    <div class="slideout-overlay"></div>
-  
-  <div class="main">
-        <div class="row">
-      <div class="large-9 columns">
-                                    <div class="section visible">
-    <div class="section__body typo richmedia">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<div id="content"></div>
-
-<script>
-    $.get('../2025-10-20-夕日竞跃.md', function(response, status, xhr){
-        $("#content").html(marked(response));
-    });
-</script>
+  <div id="content"></div>
+    <script>
+        $.get('/2025-10-20-夕日竞跃.md', function(response, status, xhr){
+            $("#content").html(marked(response));
+        });
+    </script>
     </div>
   </div>
-                  </div>
   
 </div>
 <div data-tether-id="2" style="top: 0px; left: 0px; position: absolute;"></div></body></html>
